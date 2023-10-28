@@ -4,16 +4,19 @@ const login = ()=> {
   const pass = document.getElementById('password');
   const passData = pass.value;
 
+console.log(userData);
 
+let getUser = JSON.parse(localStorage.getItem("user")) || [];
 
-let getUser = JSON.parse(localStorage.getItem("user"))
+console.log(getUser);
+const  userFound = getUser.find((us) => us.usuario === userData && us.password === passData)
 
+console.log(userFound);
 
-if(getUser.name === userData && getUser.pass === passData){
-  document.getElementById('error').innerText = 'lalalalalal';
-}else {
-
-  document.getElementById('error').innerText = 'Los datos no son correctos';
+if (!userFound) {
+  document.getElementById('error').innerText = 'Usuario no encontrado'
+} else {
+  window.location.href='/';
 }
 
 
