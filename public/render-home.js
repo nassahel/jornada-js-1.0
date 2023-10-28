@@ -1,4 +1,20 @@
 
+const search = (e) => {
+  const srch = getElementById('search')
+  const srchValue = srch.value
+  
+  const dataSec = data[1];
+
+  const dataFiltered = dataSec.filter(char => char.nombre.includes(srchValue) || char.título.includes(srchValue) || char.fecha.includes(srchValue))
+
+
+console.log(dataFiltered);
+
+console.log(e.target);
+
+}
+
+
 let speech = '';
 console.log(data);
 data[1].forEach((charla)=>{
