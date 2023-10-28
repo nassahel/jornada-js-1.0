@@ -16,7 +16,7 @@ console.log(userFound);
 if (!userFound) {
   document.getElementById('error').innerText = 'Usuario no encontrado'
 } else {
-  window.location.href='/';
+  window.location.href='../index.html';
 }
 
 
