@@ -35,6 +35,7 @@
   <main class="col">
     <div class="login-form d-flex flex-column justify-content-center align-items-center">
       <h2 class="pb-3">Iniciar sesion</h2>
+      <p id="error"></p>
       <form class="mx-auto" id="formulario">
         <div class=" pb-4 mx-auto">
           <input type="text" id="usuario" name="username" placeholder="Usuario" required>
@@ -42,16 +43,10 @@
         <div class="pb-4">
           <input type="password" id="password" name="password" placeholder="Contrase&ntilde;a" required>
         </div>
-        <input class="button-registrer" type="submit" value="Iniciar sesión">
-<!--         <div>
+        <button type="button" onclick="login()">Iniciar sesion</button>
+      <div>
   
-          <a href="../pages/error.html">
-            <button type="button" class="button-registrer">Registrarse</button>
-          </a>
-        </div> -->
-        <div class="pt-3">
-          <a href="../pages/error.html" class="mt-1 recupero">¿Olvidaste tu contraseña?</a>
-        </div>
+       
       </form>
     </div>
   </main>
@@ -60,7 +55,7 @@
   <!-- Enlace a Bootstrap v5.3.0  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <!-- Enlace a nuestro JS  -->
-  <script defer src="../login/login.js"></script>
+  <script src="login.js"></script>
 
 
 </body>
