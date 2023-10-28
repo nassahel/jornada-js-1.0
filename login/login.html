@@ -36,6 +36,7 @@
   <main class="col d-flex flex-column justify-aling-center align-items-center">
     <div class="rounded mt-5 text-center login-form rounded mt-5 mx-auto d-flex flex-column justify-content-center align-items-center">
       <h2 class="pb-3">Iniciar sesion</h2>
+      <p id="error"></p>
       <form id="formulario">
         <div class=" pb-4 mx-auto">
           <input type="text" id="usuario" name="username" placeholder="Usuario" required>
@@ -45,7 +46,7 @@
         </div>
 
         <div class="mx-auto text-center">
-          <input class="py-2 button-registrer" type="submit" value="Iniciar sesión">
+          <input class="py-2 button-registrer" type="button" onclick="login()" value="Iniciar sesión">
         </div>
 
         <div class="pt-3 text-center">

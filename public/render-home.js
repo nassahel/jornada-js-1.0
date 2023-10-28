@@ -1,23 +1,26 @@
 
-const search = (e) => {
-  const srch = getElementById('search')
+const dataSec = data[1];
+let dataFiltered = [...dataSec] 
+
+const search = () => {
+  
+  const srch = document.getElementById('search')
   const srchValue = srch.value
   
-  const dataSec = data[1];
+  if(srchValue){
+    
+   dataFiltered = dataSec.filter(char => char.orador.includes(srchValue) || char.título.includes(srchValue))
 
-  const dataFiltered = dataSec.filter(char => char.nombre.includes(srchValue) || char.título.includes(srchValue) || char.fecha.includes(srchValue))
+}else {
 
-
-console.log(dataFiltered);
-
-console.log(e.target);
-
+   dataFiltered
 }
+console.log(dataFiltered);
 
 
 let speech = '';
 console.log(data);
-data[1].forEach((charla)=>{
+dataFiltered.forEach((charla)=>{
 speech = speech + `
 <article class="col">
 <a href='detail-page/detail-page.html?id=${charla.id}'>
@@ -35,3 +38,14 @@ speech = speech + `
 
 document.getElementById('main').innerHTML = speech;
 
+document.getElementById('formulario').addEventListener('submit', (event)=>{
+  event.preventDefault()
+search()
+ 
+})
+
+
+
+}
+
+search()
