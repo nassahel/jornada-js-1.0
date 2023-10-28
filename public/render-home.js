@@ -24,7 +24,7 @@ dataFiltered.forEach((charla)=>{
 speech = speech + `
 <article class="col">
 <a href='detail-page/detail-page.html?id=${charla.id}'>
-<div class="card" style="width: 18rem;">
+<div class="card mx-auto" style="width: 18rem;">
 <img src=${charla.imagen} class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">${charla.título}</h5>  

@@ -15,3 +15,13 @@ background-color: var(--color-back-ground) ;
 a{
     text-decoration: none;
 }
+
+
+img {
+  object-fit: cover;
+
+}
+
+.card {
+height: 18rem;
+}
