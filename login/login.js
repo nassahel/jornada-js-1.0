@@ -1,34 +1,21 @@
-let admin = false;
+const login = ()=> {
+  const user = document.getElementById('usuario');
+  const userData = user.value;
+  const pass = document.getElementById('password');
+  const passData = pass.value;
 
-function checkeoAdmin() {
 
-  admin = JSON.parse(localStorage.getItem("useradmin"))
 
-  if (admin) {
-    window.location.href = "../pages/admin.html"
-  }
+let getUser = JSON.parse(localStorage.getItem("user"))
+
+
+if(getUser.name === userData && getUser.pass === passData){
+  document.getElementById('error').innerText = 'lalalalalal';
+}else {
+
+  document.getElementById('error').innerText = 'Los datos no son correctos';
 }
 
-checkeoAdmin();
-
-/************** AUTORIZACION DE ADMINISTRACION ****************/
-
-let botonIniciar = document.getElementById('formulario')
-
-botonIniciar.addEventListener('submit', function (event) {
-  event.preventDefault()
-
-  let usuario = document.getElementById('usuario').value;
-  let contrasenia = document.getElementById('password').value;
 
 
-  if (usuario === "admin" && contrasenia === "admin") {
-    admin = true;
-    alert('Iniciaste sesion como administrador')
-    window.location.href = "../pages/admin.html"
-
-    localStorage.setItem("useradmin", JSON.stringify(admin));
-  } else {
-    alert('Usuario o contraseña incorrecto')
-  }
-})
+}
